@@ -1,19 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background=""
+    android:background="@color/purplegradient"
     tools:context=".UserRegistration">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width=""
-            android:layout_height=""
-    </ScrollView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/UserPhoto"
+        android:layout_width="140dp"
+        android:layout_height="108dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="132dp"
+        android:src="@drawable/avatar"
+        app:civ_border_overlay="true"
+        app:civ_border_width="2dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/UserFullName"
+        android:layout_width="353dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="29dp"
+        android:hint="Full Name"
+        android:textColorHint="@color/white"
+        android:background="#30ffffff"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/UserEmail"
+        android:layout_width="353dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/UserFullName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="29dp"
+        android:hint="Email Id"
+        android:textColorHint="@color/white"
+        android:background="#30ffffff"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+
+        />
+
+    <EditText
+        android:id="@+id/UserPhoneNumber"
+        android:layout_width="353dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/UserEmail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="315dp"
+        android:layout_marginEnd="29dp"
+        android:hint="Pone Number"
+        android:textColorHint="@color/white"
+        android:background="#30ffffff"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/UserAddress"
+        android:layout_width="353dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/UserPhoneNumber"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="398dp"
+        android:layout_marginEnd="29dp"
+        android:hint="Address"
+        android:textColorHint="@color/white"
+        android:background="#30ffffff"
+        android:inputType="textPostalAddress"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>
