@@ -62,10 +62,6 @@ public class UserRegistration extends AppCompatActivity {
             if(requestCode == CamerarequestCode){
                 Bitmap img = (Bitmap) (data.getExtras().get("Data"));
                 PersonImage.setImageBitmap(img);
-            }else if( requestCode == gallaryrequestCode){
-
-
-
             }
         }
 

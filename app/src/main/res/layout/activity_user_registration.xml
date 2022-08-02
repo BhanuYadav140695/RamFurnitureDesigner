@@ -4,47 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/purplegradient"
     tools:context=".UserRegistration">
 
 
-    <ImageView
-        android:id="@+id/UserPhoto"
-        android:layout_width="145dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="52dp"
-        android:src="@drawable/avatar"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/UserPhoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/avatar"
+             />
+
+    </androidx.cardview.widget.CardView>
 
     <EditText
         android:id="@+id/PersonName"
         android:layout_width="305dp"
         android:layout_height="41dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:background="#30ffffff"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Full Name"
-        android:textColorHint="@color/white"
+        android:inputType="textPersonName"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/UserPhoto"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/UserPhoto"
-        app:layout_constraintTop_toBottomOf="@+id/UserPhoto" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/UserPhoto"
-        app:layout_constraintEnd_toEndOf="@+id/UserPhoto"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="@+id/UserPhoto"
-        app:layout_constraintTop_toTopOf="@+id/UserPhoto"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <EditText
         android:id="@+id/EmailAddress"
@@ -88,7 +87,7 @@
         android:inputType="textPostalAddress"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editTextPhone"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
@@ -106,17 +105,32 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="299dp"
-        android:layout_height="51dp"
+        android:layout_width="311dp"
+        android:layout_height="47dp"
+        android:background="#30ffffff"
         android:ems="10"
         android:hint="Password"
-        android:textColorHint="@color/white"
         android:inputType="textPassword"
-        android:background="#30ffffff"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/SignIn"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintVertical_bias="0.403" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="49dp"
+        android:layout_height="51dp"
+        android:background="@color/purplegradient"
+        app:layout_constraintBottom_toTopOf="@+id/PersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
