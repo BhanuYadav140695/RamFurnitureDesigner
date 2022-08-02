@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -32,6 +33,12 @@ public class UserRegistration extends AppCompatActivity {
         UploadPersonImage = findViewById(R.id.imageButton);
         RegisterUser = findViewById(R.id.SignIn);
 
+        UploadPersonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
 
 
 
