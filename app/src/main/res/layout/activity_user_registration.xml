@@ -8,18 +8,14 @@
     tools:context=".UserRegistration">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/UserPhoto"
         android:layout_width="145dp"
         android:layout_height="121dp"
         android:layout_marginTop="52dp"
-        android:src="@drawable/avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:civ_border_color="@color/black"
-        app:civ_border_width="2dp"
-        app:civ_border_overlay="true"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/PersonName"
