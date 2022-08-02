@@ -11,8 +11,7 @@ public class UserRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_registration);
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // Loock Screen Rotaion
-        getSupportActionBar().hide();
+        getSupportActionBar().hide(); // Hiding Action Bar
     }
 }

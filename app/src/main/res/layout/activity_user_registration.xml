@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,82 +10,116 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/UserPhoto"
-        android:layout_width="140dp"
-        android:layout_height="108dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="132dp"
+        android:layout_width="145dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="52dp"
         android:src="@drawable/avatar"
-        app:civ_border_overlay="true"
-        app:civ_border_width="2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp"
+        app:civ_border_overlay="true"/>
 
     <EditText
-        android:id="@+id/UserFullName"
-        android:layout_width="353dp"
-        android:layout_height="57dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="29dp"
+        android:id="@+id/PersonName"
+        android:layout_width="305dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="48dp"
+        android:background="#30ffffff"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:hint="Full Name"
         android:textColorHint="@color/white"
-        android:background="#30ffffff"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/UserPhoto"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/UserPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/UserPhoto" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/UserPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/UserPhoto"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="@+id/UserPhoto"
+        app:layout_constraintTop_toTopOf="@+id/UserPhoto"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
 
     <EditText
-        android:id="@+id/UserEmail"
-        android:layout_width="353dp"
-        android:layout_height="57dp"
-        android:layout_below="@id/UserFullName"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="29dp"
-        android:hint="Email Id"
-        android:textColorHint="@color/white"
+        android:id="@+id/EmailAddress"
+        android:layout_width="307dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
         android:background="#30ffffff"
+        android:ems="10"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
-
-        />
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/PersonName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/PersonName"
+        app:layout_constraintTop_toBottomOf="@+id/PersonName" />
 
     <EditText
-        android:id="@+id/UserPhoneNumber"
-        android:layout_width="353dp"
-        android:layout_height="57dp"
-        android:layout_below="@id/UserEmail"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="315dp"
-        android:layout_marginEnd="29dp"
-        android:hint="Pone Number"
-        android:textColorHint="@color/white"
+        android:id="@+id/editTextPhone"
+        android:layout_width="308dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
         android:background="#30ffffff"
+        android:ems="10"
+        android:hint="Phone Number"
         android:inputType="phone"
-        android:textColor="@color/white"
-        />
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/EmailAddress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/EmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
 
     <EditText
-        android:id="@+id/UserAddress"
-        android:layout_width="353dp"
-        android:layout_height="57dp"
-        android:layout_below="@id/UserPhoneNumber"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="398dp"
-        android:layout_marginEnd="29dp"
-        android:hint="Address"
-        android:textColorHint="@color/white"
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="308dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
         android:background="#30ffffff"
+        android:ems="10"
+        android:hint="Address"
         android:inputType="textPostalAddress"
-        android:textColor="@color/white"
-        />
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="SignIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="299dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"
+        android:background="#30ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/SignIn"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
