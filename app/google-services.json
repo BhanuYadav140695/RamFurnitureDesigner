@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "454163341930",
+    "project_id": "ramfurnituredesigner",
+    "storage_bucket": "ramfurnituredesigner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454163341930:android:531b1d54d88440d449a013",
+        "android_client_info": {
+          "package_name": "com.example.ramfurnituredesigner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454163341930-879qb3ano9gtuqlcqdcpuo9agp6ueq7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJn394BMTrFaKKpeeF8-ppJQQQvlZ0rfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454163341930-879qb3ano9gtuqlcqdcpuo9agp6ueq7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
